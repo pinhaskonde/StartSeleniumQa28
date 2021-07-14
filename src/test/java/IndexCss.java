@@ -24,11 +24,14 @@ public class IndexCss {
     @Test
     public void itemTest (){
         WebElement item1 = wd.findElement(By.cssSelector("#nav ul li:first-child"));
+        wd.findElement(By.xpath("//[*id='nav']//ul//li[1]"));                             //xPass
         item1.click();
         String item1Text = item1.getText();
 
         WebElement alert = wd.findElement(By.cssSelector("#alert"));
+        wd.findElement(By.xpath("//*[@id='alert']"));                                    //xPass
         String alertText  = alert.getText();
+
 
 //        if(alertText.contains(item1Text)){
 //            System.out.println("Test passed");
@@ -42,7 +45,9 @@ public class IndexCss {
     @Test
     public void formTest (){
         WebElement name = wd.findElement(By.name("name"));
+        wd.findElement(By.xpath("//*[@name='name']"));                                   //  xPass
         WebElement surename = wd.findElement(By.cssSelector("[name='surename']"));
+        wd.findElement(By.xpath("//*[@name='surename']"));              //  xPass
         name.click();
         name.clear();
         name.sendKeys("Hello");
@@ -51,6 +56,7 @@ public class IndexCss {
         surename.sendKeys("Hello");
 
         wd.findElement(By.cssSelector("button.btn")).click();
+        wd.findElement(By.xpath("//button[@class='btn']")).click();
 
         WebElement alert = wd.findElement(By.cssSelector("#alert"));
         String alertText  = alert.getText();
@@ -61,6 +67,7 @@ public class IndexCss {
     @Test
     public void tableTest(){
         List<WebElement> rows = wd.findElements(By.cssSelector("#country-table"));
+
         int numberRows = rows.size();
         System.out.println("Rows in table: "+ numberRows);
 
@@ -92,3 +99,5 @@ public class IndexCss {
     }
 
 }
+
+
