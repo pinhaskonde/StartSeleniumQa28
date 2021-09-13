@@ -93,11 +93,11 @@ public class HomeTest {
     public void homeLogin(){        //Homework
         WebElement login = wd.findElement(By.cssSelector("a[href='/login']"));
         login.click();
-        WebElement email = wd.findElement(By.cssSelector("[placeholder$=\"Email\"]"));
+        WebElement email = wd.findElement(By.cssSelector("[placeholder$=Email]"));
         email.click();
         email.clear();
         email.sendKeys("maria@gmail.com+7");
-        WebElement password = wd.findElement(By.cssSelector("[placeholder$=\"Password\"]"));
+        WebElement password = wd.findElement(By.cssSelector("[placeholder$=Passwor"));
         password.click();
         password.clear();
         password.sendKeys("Azs2hws$e");

@@ -17,8 +17,8 @@ public class FirstTest {
 
     @Test
     public  void startGoogle(){
-//        wd.get("https://www.google.com/");
-        wd.navigate().to("https://www.google.com/");
+        wd.get("https://www.google.com/");
+//        wd.navigate().to("https://www.google.com/");
 
         //ad new contact
     }
